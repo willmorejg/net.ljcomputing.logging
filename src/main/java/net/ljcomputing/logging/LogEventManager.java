@@ -16,7 +16,7 @@
 
 package net.ljcomputing.logging;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -27,8 +27,8 @@ import org.aspectj.lang.annotation.Pointcut;
  * @author James G. Willmore
  *
  */
-@Service
 @Aspect
+@Component
 public class LogEventManager {
 
   /**
