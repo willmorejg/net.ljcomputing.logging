@@ -53,4 +53,11 @@ public @interface LogEvent {
      * @return the level
      */
     Level level() default Level.DEBUG;
+    
+    /**
+     * Indicates if the method arguments should be logged.
+     *
+     * @return true, if successful
+     */
+    boolean showArgs() default false;
 }

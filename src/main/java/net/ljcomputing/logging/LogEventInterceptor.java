@@ -65,6 +65,15 @@ public class LogEventInterceptor {
     Logger logger = LoggerFactory.getLogger(bean.getClass());
 
     log(logger, level, "Method: " + method + " - " + message);
+
+    if(event.showArgs()) {
+      log(logger, level, "     arguments passed:");
+      Object[] signatureArgs = jp.getArgs();
+      for(Object arg : signatureArgs) {
+        log(logger, level, "      arg : " + arg);
+      }
+    }
+
   }
 
   /**
