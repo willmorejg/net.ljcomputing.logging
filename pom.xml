@@ -23,7 +23,8 @@
   <source.version>1.8</source.version>
   <target.version>1.8</target.version>
 
-  <net-ljcomputing-gson.version>1.1.1-SNAPSHOT</net-ljcomputing-gson.version>
+  <!-- <net-ljcomputing-gson.version>1.1.1-SNAPSHOT</net-ljcomputing-gson.version> -->
+  <net-ljcomputing-gson.version>gson-1.1.0</net-ljcomputing-gson.version>
  </properties>
 
  <!-- Contact and License Information -->
@@ -65,6 +66,15 @@
 
  </distributionManagement>
 
+ <repositories>
+
+  <repository>
+   <id>jitpack.io</id>
+   <url>https://jitpack.io</url>
+  </repository>
+
+ </repositories>
+
  <dependencies>
 
   <dependency>
@@ -82,9 +92,15 @@
    <artifactId>spring-boot-starter-aop</artifactId>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>gson</artifactId> -->
+  <!-- <version>${net-ljcomputing-gson.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
-   <groupId>net.ljcomputing</groupId>
-   <artifactId>gson</artifactId>
+   <groupId>com.github.willmorejg</groupId>
+   <artifactId>net.ljcomputing.gson</artifactId>
    <version>${net-ljcomputing-gson.version}</version>
   </dependency>
 

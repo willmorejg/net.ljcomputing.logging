@@ -32,16 +32,16 @@ digraph G {
 		</table>>, URL="./annotation/LogEvent.Level.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.logging.LogEventInterceptor NAVASSOC net.ljcomputing.gson.converter.GsonConverterService
 	c80:p -> c86:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.logging.LogEventInterceptor DEPEND org.slf4j.Logger
-	c80:p -> c87:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.logging.LogEventInterceptor DEPEND org.aspectj.lang.JoinPoint
+	c80:p -> c87:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.logging.LogEventInterceptor DEPEND net.ljcomputing.logging.annotation.LogEvent
+	c80:p -> c82:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.logging.LogEventInterceptor DEPEND org.slf4j.Logger
 	c80:p -> c88:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.logging.LogEventInterceptor DEPEND net.ljcomputing.logging.annotation.LogEvent.Level
 	c80:p -> c83:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.logging.LogEventInterceptor DEPEND net.ljcomputing.logging.annotation.LogEvent
-	c80:p -> c82:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// org.slf4j.Logger
-	c87 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/slf4j/Logger.html">
+	c88 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>
@@ -57,7 +57,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/gson/converter/GsonConverterService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.aspectj.lang.JoinPoint
-	c88 [label=<<table title="org.aspectj.lang.JoinPoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/aspectj/lang/JoinPoint.html">
+	c87 [label=<<table title="org.aspectj.lang.JoinPoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/aspectj/lang/JoinPoint.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JoinPoint </td></tr>
