@@ -23,6 +23,8 @@
   <source.version>1.8</source.version>
   <target.version>1.8</target.version>
 
+  <github.username>willmorejg</github.username>
+
   <!-- <net-ljcomputing-gson.version>1.1.1-SNAPSHOT</net-ljcomputing-gson.version> -->
   <net-ljcomputing-gson.version>gson-1.1.0</net-ljcomputing-gson.version>
  </properties>
