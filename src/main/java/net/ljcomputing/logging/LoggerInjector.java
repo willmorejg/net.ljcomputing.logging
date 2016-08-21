@@ -40,20 +40,20 @@ import java.lang.reflect.Field;
 public class LoggerInjector implements BeanPostProcessor {
 
   /**
-   * @see org.springframework.beans.factory.config.BeanPostProcessor#postProcessAfterInitialization(java.lang.Object, java.lang.String)
+   * @see org.springframework.beans.factory.config.BeanPostProcessor
+   * #postProcessAfterInitialization(java.lang.Object, java.lang.String)
    */
-  public Object postProcessAfterInitialization(Object bean, String beanName)
-      throws BeansException {
+  public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
     return bean;
   }
 
   /**
-   * @see org.springframework.beans.factory.config.BeanPostProcessor#postProcessBeforeInitialization(java.lang.Object, java.lang.String)
+   * @see org.springframework.beans.factory.config.BeanPostProcessor
+   * #postProcessBeforeInitialization(java.lang.Object, java.lang.String)
    */
-  public Object postProcessBeforeInitialization(final Object bean,
-      String beanName) throws BeansException {
-    ReflectionUtils.doWithFields(bean.getClass(),
-        new LoggerFieldCallback(bean));
+  public Object postProcessBeforeInitialization(final Object bean, String beanName)
+      throws BeansException {
+    ReflectionUtils.doWithFields(bean.getClass(), new LoggerFieldCallback(bean));
     return bean;
   }
 
@@ -62,7 +62,7 @@ public class LoggerInjector implements BeanPostProcessor {
 /**
  * Logger field callback.
  */
-class LoggerFieldCallback implements FieldCallback {
+final class LoggerFieldCallback implements FieldCallback {
   /** The bean. */
   private final Object bean;
 
@@ -78,8 +78,7 @@ class LoggerFieldCallback implements FieldCallback {
   /**
    * @see org.springframework.util.ReflectionUtils.FieldCallback#doWith(java.lang.reflect.Field)
    */
-  public void doWith(Field field)
-      throws IllegalArgumentException, IllegalAccessException {
+  public void doWith(Field field) throws IllegalArgumentException, IllegalAccessException {
     ReflectionUtils.makeAccessible(field);
     if (field.getAnnotation(InjectLogging.class) != null) {
       Logger logger = LoggerFactory.getLogger(bean.getClass());

@@ -33,31 +33,31 @@ import java.lang.annotation.Target;
 @Documented
 public @interface LogEvent {
 
-    /**
-     * The logging level enumeration.
-     */
-    enum Level {
-	TRACE, DEBUG, INFO, WARN, ERROR
-    }
-    
-    /**
-     * Logging message (default is "Logging event").
-     *
-     * @return the string
-     */
-    String message() default "Logging event";
-    
-    /**
-     * Logging level (default is DEBUG).
-     *
-     * @return the level
-     */
-    Level level() default Level.DEBUG;
-    
-    /**
-     * Indicates if the method arguments should be logged.
-     *
-     * @return true, if successful
-     */
-    boolean showArgs() default false;
+  /**
+   * The logging level enumeration.
+   */
+  enum Level {
+    TRACE, DEBUG, INFO, WARN, ERROR
+  }
+
+  /**
+   * Logging message (default is "Logging event").
+   *
+   * @return the string
+   */
+  String message() default "Logging event";
+
+  /**
+   * Logging level (default is DEBUG).
+   *
+   * @return the level
+   */
+  Level level() default Level.DEBUG;
+
+  /**
+   * Indicates if the method arguments should be logged.
+   *
+   * @return true, if successful
+   */
+  boolean showArgs() default false;
 }
